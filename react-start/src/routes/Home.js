@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie.js";
+import Loading from "components/layout/Loading.js";
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -17,14 +18,15 @@ function Home() {
     }, [])
 
     return <div>
-            {loading ? <h1>Loading...</h1> : 
+            {loading ? <Loading /> : 
                 <div>
                 {movies.map((movie) => <Movie 
                     coverImg={movie.medium_cover_image}
                     id={movie.id}
                     title={movie.title}
                     summary={movie.summary}
-                    genres={movie.genres}/>)}
+                    genres={movie.genres}
+                    key={movie.id}/>)}
                 </div>
             }
             </div>;
