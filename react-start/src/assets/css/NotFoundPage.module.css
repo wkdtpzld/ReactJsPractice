@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10rem;
+}
+
+.container h1 {
+    color: white;
+    font-size: 100px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.container h2 {
+    margin-top: 3rem;
+}
+
+.container h2 a {
+    text-decoration: none;
+    color: wheat;
+}
+
+@media screen and (max-width: 730px){
+    .container h1 {
+        font-size: 35px;
+    }
+
+    .container h1 span {
+        font-size: 100px;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+    }
+}

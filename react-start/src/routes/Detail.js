@@ -12,9 +12,8 @@ function Detail() {
         const json = await (
             await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${param}`)
         ).json();
-        setData((current) => json.data.movie);
+        setData(json.data.movie);
         setLoading((current) => !current);
-        console.log(json.data);
     }
         
     useEffect(() => {

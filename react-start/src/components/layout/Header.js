@@ -5,7 +5,7 @@ function Header() {
 
     return (
         <nav>
-            <h2 className={styles.logo}>Movie Lookie</h2>
+            <h2 className={styles.logo}><Link to="/">Movie Lookie</Link></h2>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="#">Bottom</Link></li>
